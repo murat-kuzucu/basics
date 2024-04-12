@@ -6,11 +6,14 @@ namespace basics.Controllers;
 public class CourseController : Controller
 {
     // /course/index
-    public string Index(){
-        return "course/index";
+    public IActionResult Index(){
+        return View();
     }
     // /course/list
-    public string List(){
-        return "course/list";
+    public IActionResult List(){
+        return View();
+    }
+    public IActionResult CourseList(){
+        return View();
     }
 }
