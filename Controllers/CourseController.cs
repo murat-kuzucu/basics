@@ -16,7 +16,16 @@ public class CourseController : Controller
     }
     // /course/list
     public IActionResult List(){
-        return View();
+        var courses = new List<Course>()
+        {
+            new Course{CourseId = 1, CourseTitle = "ASP.NET Core"},
+            new Course{CourseId = 2, CourseTitle = "Angular"},
+            new Course{CourseId = 3, CourseTitle = "React"},
+            new Course{CourseId = 4, CourseTitle = "Vue"},
+            new Course{CourseId = 5, CourseTitle = "Blazor"}
+        };
+        return View("CourseList", courses);
+        
     }
     public IActionResult CourseList(){
         return View();
